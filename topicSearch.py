@@ -5,8 +5,6 @@ import time
 import spacy
 import sys
 
-
-
 class Topic:
     def __init__(self, subreddit, before):
         self.subreddit = subreddit
@@ -51,20 +49,16 @@ def runCommandLineArguments():
         print(element[0])
         print(element[1])
         print(element[2])
-
+    with open("topic_results.json", "w") as jsonFile:
+        json.dump(phrases, jsonFile)
+    
 
 if len(sys.argv) == 3:
     runCommandLineArguments()
 else:
     print("ERROR: Invalid input for search")
-    print("Usage: python3 topicSearch.py [subreddit][previous days to scan]")
-# new = runCommandLineArguments()
-# 1618070767937
-# test = Topic('bullish', 'eth', 5, 1626704502)
-# data = test.getPushshiftData()
-# phrases = test.getSpaceyAnalysis(data)
+    print("Usage: python3 topicSearch.py [subreddit][previous number of days to scan]")
 
-# print(phrases)
 
 
 
