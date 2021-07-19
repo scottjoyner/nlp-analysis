@@ -101,7 +101,6 @@ def runCommandLineArguments():
     plotBagOfWords(bagOfWords, "Total words list without single use words")
     plotBagOfWords(bagOfNouns, "Total Nouns list based on frequency")
     plotBagOfWords(bagOfVerbs, "Total Verbs list based on frequency")
-    plotBagOfWords(bagOfWords, "Total words list without single use words")
 
     # print(bagOfWords)
     # wordfreq = [bagOfWords.count(w) for w in bagOfWords] # a list comprehension
